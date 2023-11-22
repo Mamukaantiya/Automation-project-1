@@ -16,7 +16,7 @@ describe('Issue deletion', () => {
    //Clicking the trash button for deletion
    cy.get('[data-testid="icon:trash"]').click();
    
-   //Conformation page opens and then initiate deletion of the issue
+   //Confirmation page opens and then initiate deletion of the issue
    cy.get('[data-testid="modal:confirm"]').should('be.visible');
    cy.get('[data-testid="modal:confirm"]').within(() => {
    cy.contains('Are you sure you want to delete this issue?').should('be.visible');
